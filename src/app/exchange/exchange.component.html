@@ -1,0 +1,13 @@
+<form (ngSubmit)="calculate()">
+  <div class="row">
+    <div class="col-md-6">
+      <input type="text" class="form-control" id="amount" required [(ngModel)]="model.amount" name="amount" currencyMask [options]="currencyFromMask" />
+    </div>
+    <div class="col-md-6">
+      <input type="text" class="form-control" id="result" readonly [(ngModel)]="model.result" name="result" currencyMask [options]="currencyToMask" />
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <button type="submit" class="btn btn-secondary" >CALCULATE</button>
+  </div>
+</form>
